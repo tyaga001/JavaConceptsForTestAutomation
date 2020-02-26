@@ -1,0 +1,71 @@
+Types of Constructors
+There are three types of constructors: Default, No-arg constructor and Parameterized.
+
+Default constructor:
+If you do not implement any constructor in your class,
+Java compiler inserts a default constructor into your code on your behalf.
+This constructor is known as default constructor.
+You would not find it in your source code(the java file)
+as it would be inserted into the code during compilation and exists in .class file.
+
+Note: If you implement any constructor then you no longer receive a default constructor from Java compiler.
+
+
+no-arg constructor:
+Constructor with no arguments is known as no-arg constructor.
+The signature is same as default constructor,
+however body can have any code unlike default constructor
+where the body of the constructor is empty.
+
+Example: no-arg constructor
+
+class HelloWorld
+{
+     public HelloWorld()
+     {
+         System.out.println("This is a no argument constructor");
+     }
+     public static void main(String args[]) {
+    	 new HelloWorld();
+     }
+}
+
+Parameterized constructor:
+Constructor with arguments is known as Parameterized constructor.
+To check the example look at the constructor java file.
+
+Tricky question:
+What if we implement only parameterized constructor in class
+
+class Test
+{
+      private int var;
+      public Test(int num)
+      {
+             var=num;
+      }
+      public int getValue()
+      {
+              return var;
+      }
+      public static void main(String args[])
+      {
+              Test obj = new Test();
+              System.out.println("value of var is: "+obj.getValue());
+      }
+}
+
+
+Output: It will throw a compilation error.
+The reason is, the statement Test obj = new Test(); is invoking a default constructor
+which we don’t have in our program.
+when you don’t implement any constructor in your class,
+compiler inserts the default constructor into your code,
+however when you implement any constructor (in above example I have implemented parameterized constructor with int parameter),
+then you don’t receive the default constructor by compiler into your code.
+
+Note:
+If we remove the parameterized constructor from the above code then the program would run fine,
+because then compiler would insert the default constructor into your code.
+
+Java – Constructor Chaining with example
