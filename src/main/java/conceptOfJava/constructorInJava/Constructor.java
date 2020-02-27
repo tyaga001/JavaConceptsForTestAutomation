@@ -1,4 +1,4 @@
-package coreJava;
+package conceptOfJava.constructorInJava;
 
 public class Constructor {
 

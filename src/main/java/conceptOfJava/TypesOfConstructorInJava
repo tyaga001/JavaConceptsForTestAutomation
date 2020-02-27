@@ -1,6 +1,6 @@
 Types of Constructors
 There are three types of constructors: Default, No-arg constructor and Parameterized.
-
+********************************************************************************************************************************
 Default constructor:
 If you do not implement any constructor in your class,
 Java compiler inserts a default constructor into your code on your behalf.
@@ -10,7 +10,7 @@ as it would be inserted into the code during compilation and exists in .class fi
 
 Note: If you implement any constructor then you no longer receive a default constructor from Java compiler.
 
-
+********************************************************************************************************************************
 no-arg constructor:
 Constructor with no arguments is known as no-arg constructor.
 The signature is same as default constructor,
@@ -29,7 +29,7 @@ class HelloWorld
     	 new HelloWorld();
      }
 }
-
+****************************************************************************************************************************
 Parameterized constructor:
 Constructor with arguments is known as Parameterized constructor.
 To check the example look at the constructor java file.
@@ -55,7 +55,7 @@ class Test
       }
 }
 
-
+*******************************************************************************************************************************
 Output: It will throw a compilation error.
 The reason is, the statement Test obj = new Test(); is invoking a default constructor
 which we don’t have in our program.
@@ -63,9 +63,21 @@ when you don’t implement any constructor in your class,
 compiler inserts the default constructor into your code,
 however when you implement any constructor (in above example I have implemented parameterized constructor with int parameter),
 then you don’t receive the default constructor by compiler into your code.
-
+********************************************************************************************************************************
 Note:
 If we remove the parameterized constructor from the above code then the program would run fine,
 because then compiler would insert the default constructor into your code.
-
+********************************************************************************************************************************
 Java – Constructor Chaining with example
+When A constructor calls another constructor of same class then this is called constructor chaining.
+The real purpose of Constructor Chaining is that you can pass parameters through a bunch of different constructors,
+but only have the initialization done in a single place.
+This allows you to maintain your initializations from a single location,
+while providing multiple constructors to the user.
+If we don’t chain, and two different constructors require a specific parameter,
+you will have to initialize that parameter twice, and when the initialization changes,
+you’ll have to change it in every constructor, instead of just the one.
+
+As a rule, constructors with fewer arguments should call those with more
+
+
