@@ -80,4 +80,36 @@ you’ll have to change it in every constructor, instead of just the one.
 
 As a rule, constructors with fewer arguments should call those with more
 
+******************************************************************************************************************************
+
+Constructor Overloading:
+Constructor overloading is a concept of having more than one constructor with different parameters list,
+in such a way so that each constructor performs a different task.
+
+***************************************************************************************************************************
+Java static constructor – Is it really Possible to have them in Java?
+Everything that is marked static belongs to the class only,
+for example static method cannot be inherited in the sub class because
+since each constructor is being called by its subclass during creation of the object of its subclass,
+so if you mark constructor as static the subclass will not be able to access the constructor of its parent class
+because it is marked static and thus belong to the class only.
+This will violate the whole purpose of inheritance concept and that is reason why a constructor cannot be static.
+they belong to the class in which they have been declared
+
+
+
+When we created the object of child class,
+it first invoked the constructor of parent class and then the constructor of it’s own class.
+It happened because the new keyword creates the object and then invokes the constructor for initialization,
+since every child class constructor by default has super() as first statement which calls it’s parent class’s constructor.
+ The statement super() is used to call the parent class(base class) constructor.
+
+This is the reason why constructor cannot be static –
+Because if we make them static they cannot be called from child class thus object of child class cannot be created.
+
+****************************************************************************************************************************
+
+Static Constructor Alternative – Static Blocks
+
+
 
