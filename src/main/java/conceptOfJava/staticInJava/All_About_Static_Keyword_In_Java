@@ -1,0 +1,32 @@
+**********************************************************************************
+Static keyword can be used with class, variable, method and block.
+Static members belong to the class instead of a specific instance,
+this means if you make a member static, you can access it without object.
+
+*********************************************************************************
+
+Static Block:
+Static block is used for initializing the static variables.
+This block gets executed when the class is loaded in the memory.
+A class can have multiple Static blocks,
+which will execute in the same sequence in which they have been written into the program.
+
+*****************************************************************************************
+
+Multiple Static Block:
+Lets see how multiple static blocks work in Java.
+They execute in the given order which means the first static block executes before second static block.
+That’s the reason, values initialized by first block are overwritten by second block.
+
+************************************************************************************************
+
+Java Static Variables:
+A static variable is common to all the instances (or objects) of the class because it is a class level variable.
+In other words you can say that only a single copy of static variable is created and shared among all the instances of the class.
+Memory allocation for such variables only happens once when the class is loaded in the memory.
+Few Important Points:
+
+Static variables are also known as Class Variables.
+Unlike non-static variables, such variables can be accessed directly in static and non-static methods.
+
+***************************************************************************************************************
